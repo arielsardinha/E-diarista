@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\ListaRDiarias;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ListaRDiarias::class);
+Route::get('/contato', [SiteController::class, 'contato']);
+Route::get('/sobre', [SiteController::class, 'sobre']);
 
 Auth::routes();
 
