@@ -11,6 +11,7 @@ class SiteController extends Controller
 
     public function sobre()
     {
-        return view('sobre');
+        $empresa = 'treina web';
+        return view('sobre', ['empresa123' => $empresa]);
     }
 }

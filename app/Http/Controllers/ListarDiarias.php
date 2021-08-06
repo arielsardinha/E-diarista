@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Diaria;
 
 class ListaRDiarias extends Controller
 {
@@ -13,6 +14,10 @@ class ListaRDiarias extends Controller
      */
     public function __invoke()
     {
-        return view('welcome');
+        $diarias = Diaria::get();
+
+        // para a execução e dar um vardamp na tela
+        dd($diarias);
+        return view('welcome',['diarias',$diarias]);
     }
 }
