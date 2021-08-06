@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ListaRDiarias;
+use App\Http\Controllers\ServicoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
 
@@ -16,6 +17,7 @@ use App\Http\Controllers\SiteController;
 */
 
 Route::get('/', ListaRDiarias::class);
+Route::get('/servicos',[ServicoController::class,'index'])->name('servicos.index');
 Route::get('/contato', [SiteController::class, 'contato']);
 Route::get('/sobre', [SiteController::class, 'sobre']);
 
