@@ -20,7 +20,6 @@ Route::get('/', ListaRDiarias::class);
 Route::get('/servicos',[ServicoController::class,'index'])->name('servicos.index');
 Route::get('/contato', [SiteController::class, 'contato']);
 Route::get('/sobre', [SiteController::class, 'sobre']);
-
-Auth::routes();
-
+Route::get('/servicos/create',[ServicoController::class,'create'])->name('servicos.create');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes();

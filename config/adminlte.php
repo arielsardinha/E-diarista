@@ -238,8 +238,8 @@ return [
                     'icon' => 'fas fa-fw fa-list'
                 ],
                 [
-                    'text' => 'Cadastrar Serviço',
-                    'url'  => '#',
+                    'text' => 'Novo Serviço',
+                    'route'  => 'servicos.create',
                     'icon' => 'fas fa-fw fa-file'
                 ],
               

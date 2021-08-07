@@ -15,9 +15,6 @@ class ListaRDiarias extends Controller
     public function __invoke()
     {
         $diarias = Diaria::get();
-
-        // para a execução e dar um vardamp na tela
-        dd($diarias);
         return view('welcome',['diarias',$diarias]);
     }
 }
