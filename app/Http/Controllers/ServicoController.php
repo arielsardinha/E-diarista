@@ -10,7 +10,7 @@ class ServicoController extends Controller
     public function index()
     {
         $servicos = Servico::simplePaginate(10);
-        return view('servicos.index')->with('servicos',$servicos);
+        return view('servicos.index')->with('servicos', $servicos);
     }
     public function create()
     {
@@ -23,5 +23,11 @@ class ServicoController extends Controller
         $retorno = Servico::create($dados);
 
         return redirect()->route('servicos.index');
+    }
+    public function edit(int $id)
+    {
+        $servico = Servico::findOrFail($id);
+
+        return view('servicos.edit')->with('servico', $servico);
     }
 }
