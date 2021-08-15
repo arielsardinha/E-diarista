@@ -28,6 +28,9 @@ class CreateServicosTable extends Migration
             $table->decimal('valor_sala', 10, 2);
             $table->integer('horas_sala');
 
+            $table->decimal('valor_banheiro', 10, 2);
+            $table->integer('horas_banheiro');
+
             $table->decimal('valor_cozinha', 10, 2);
             $table->integer('horas_cozinha');
 
