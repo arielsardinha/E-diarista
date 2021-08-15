@@ -17,11 +17,12 @@ use App\Http\Controllers\SiteController;
 */
 
 Route::get('/', ListaRDiarias::class);
-Route::get('/servicos',[ServicoController::class,'index'])->name('servicos.index');
+Route::get('/servicos', [ServicoController::class, 'index'])->name('servicos.index');
 Route::get('/contato', [SiteController::class, 'contato']);
 Route::get('/sobre', [SiteController::class, 'sobre']);
-Route::get('/servicos/create',[ServicoController::class,'create'])->name('servicos.create');
+Route::get('/servicos/create', [ServicoController::class, 'create'])->name('servicos.create');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::Post('/servicos',[ServicoController::class, 'store'])->name('servicos.store');
-Route::get('/servicos/{servico}/edit',[ServicoController::class,'edit'])->name('servicos.edit');
+Route::Post('/servicos', [ServicoController::class, 'store'])->name('servicos.store');
+Route::get('/servicos/{servico}/edit', [ServicoController::class, 'edit'])->name('servicos.edit');
+Route::put('/servicos/{servico}', [ServicoController::class, 'update'])->name('servicos.update');
 Auth::routes();
